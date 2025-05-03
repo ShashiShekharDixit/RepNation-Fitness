@@ -13,17 +13,17 @@ import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
 const BenefitsArr: IBenefit[] = [
   {
     icon: <HomeModernIcon className="h-6 w-6" />,
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Train with confidence using our cutting-edge machines designed for performance, comfort, and safety.",
     title: "State of the Art Equipment",
   },
   {
     icon: <UserGroupIcon className="h-6 w-6" />,
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "We’re committed to your fitness journey—if you're not satisfied, we’ll make it right.",
     title: "100% Satisfaction Guarantee",
   },
   {
     icon: <AcademicCapIcon className="h-6 w-6" />,
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Get guided by certified professionals who personalize your training to match your goals.",
     title: "Certified Personal Trainers",
   },
 ];
@@ -73,15 +73,11 @@ const Benefits = ({ setSelectedPage }: Props) => {
         >
           <HeaderText>{"More Than Just a Gym"}</HeaderText>
           <p className="my-5 text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-            aliquid quisquam nostrum enim officiis animi ratione veritatis,
-            eligendi, delectus at odit, optio voluptatum praesentium quod
-            corporis maiores corrupti modi maxime?
+            At our gym, fitness goes beyond workouts. We offer a space where motivation thrives, goals are crushed, and confidence is built—one rep at a time.
           </p>
         </motion.div>
 
         {/* Benefits */}
-
         <motion.div
           initial="hidden"
           whileInView={"visible"}
@@ -165,22 +161,13 @@ const Benefits = ({ setSelectedPage }: Props) => {
               }}
             >
               <p className="my-5">
-                {" "}
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Doloremque aspernatur molestiae repudiandae temporibus
-                consequuntur perspiciatis libero perferendis quod placeat
-                assumenda. Dolores fugit sequi dolor incidunt, nemo aut sed
-                distinctio perspiciatis?
+                Join a vibrant community that motivates you to show up and push forward. Whether you're here for strength, stamina, or transformation, we’ve got your back.
               </p>
               <p className="mb-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
-                quo libero laborum ea, ipsam aspernatur dolorum explicabo
-                recusandae fugiat porro id beatae illo culpa animi natus
-                temporibus maxime expedita facere.
+                Our programs are built on results, guided by science, and powered by support. Experience a place where your progress becomes your lifestyle.
               </p>
             </motion.div>
             {/* button */}
-
             <div className="relative mt-16">
               <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
                 <ActionButton setSelectedPage={setSelectedPage}>

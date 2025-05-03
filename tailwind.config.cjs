@@ -29,6 +29,15 @@ module.exports = {
         sparkles: "url('./assets/Sparkles.png')",
         circles: "url('./assets/Circles.png')",
       },
+      keyframes: {
+        slide: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        slide: 'slide 10s linear infinite',
+      },
     },
     screens: {
       xs: "480px",

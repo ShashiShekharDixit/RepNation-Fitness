@@ -17,33 +17,37 @@ const classes: Array<ClassType> = [
   {
     name: "Weight Training Classes",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Build muscle, boost strength, and improve endurance with our expert-led weight training classes designed for all fitness levels.",
     image: image1,
   },
   {
     name: "Yoga Classes",
+    description:
+      "Relax your mind and stretch your body with guided yoga sessions focused on flexibility, balance, and inner peace.",
     image: image2,
   },
   {
     name: "Ab Core Classes",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Target your core with high-intensity ab workouts that sculpt, strengthen, and tone your midsection effectively.",
     image: image3,
   },
   {
     name: "Adventure Classes",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Take fitness outdoors with our fun, adventurous group classes that combine cardio, strength, and teamwork.",
     image: image4,
   },
   {
     name: "Fitness Classes",
+    description:
+      "Join our general fitness classes to boost your energy, burn calories, and stay motivated with dynamic, full-body workouts.",
     image: image5,
   },
   {
     name: "Training Classes",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Level up your performance with structured training sessions that focus on endurance, agility, and athletic conditioning.",
     image: image6,
   },
 ];
@@ -78,31 +82,31 @@ const OurClasses = ({ setSelectedPage }: Props) => {
         >
           <div className="md:w-3/5">
             <HeaderText>{"OUR CLASSES"}</HeaderText>
-            <p className="py-5 ">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem
-              vel qui voluptates eum enim ipsa dolorum quas nesciunt nostrum!
-              Excepturi commodi minima laborum. Inventore ipsa tempore aliquid
-              assumenda vel laborum.
+            <p className="py-5">
+              Discover a variety of fitness classes tailored to your goals—whether you're looking to build strength, improve flexibility, or just have fun staying active. Our experienced trainers and motivating group environment will help you reach your next level of fitness.
             </p>
           </div>
         </motion.div>
-        {/* side scrolling */}
 
-        <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
-          <ul className="w-[2800px] whitespace-nowrap ">
-            {classes.map((item: ClassType, index) => (
-              <Class
-                key={`${item.name}-${index}`}
-                name={item.name}
-                description={item?.description}
-                image={item.image}
-              />
-            ))}
-          </ul>
+        {/* Continuous scrolling animation */}
+        <div className="mt-10 h-[353px] overflow-hidden relative">
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="flex w-max animate-slide gap-8">
+              {[...classes, ...classes].map((item: ClassType, index) => (
+                <Class
+                  key={`${item.name}-${index}`}
+                  name={item.name}
+                  description={item?.description}
+                  image={item.image}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </motion.div>
     </section>
   );
 };
+
 
 export default OurClasses;
